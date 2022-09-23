@@ -44,7 +44,7 @@ def regression(info):
     xp = np.linspace(min(x), max(x), num=2)
     yp = rgs.coef_*xp+rgs.intercept_
     r2 = round(rgs.score(x, y), 3)
-    msg = "La recta es: {}\nIntercepto: {}\nR2: {}".format(yp, rgs.intercept_, r2)
+    msg = "La recta es: {}x + ({})\nR2: {}".format(round(rgs.coef_[0][0], 2), round(rgs.intercept_[0], 2), r2)
     print(msg)
     graph(x, y, xp, yp, r2)
     
